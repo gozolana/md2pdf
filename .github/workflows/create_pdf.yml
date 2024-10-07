@@ -18,6 +18,7 @@ jobs:
         with:
           node-version: '18.20.4'
       - run: |
+          sudo apt install fonts-noto
           node -v
           npm install
           npx md-to-pdf ./test.md
