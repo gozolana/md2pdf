@@ -1,0 +1,15 @@
+{
+  "name": "md2pdf",
+  "version": "1.0.0",
+  "description": "Github Actions converting markdown to pdf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "md-to-pdf": "^5.2.4"
+  }
+}
