@@ -1,0 +1,27 @@
+# .github/workflows/create_pdf.yml
+name: Create PDF
+on:
+  push:
+    paths:
+      - '**.md'
+      - '.github/workflows/create_pdf.yml'
+
+jobs:
+  lint:
+    name: Create PDF
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "18.20.4"
+      - run: |
+          node -v
+          npm install
+          md-to-pdf ./test.md
+      - uses: actions/upload-artifact@v1
+        with:
+          name: create-pdf
+          path: ./test.pdf
